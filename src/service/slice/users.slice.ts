@@ -13,7 +13,35 @@ const initialState: IUserInitialState = {
         limit: 0,
         skip: 0,
         total: 0,
-        users: []
+        users: [
+    {
+        id: 1,
+        firstName: "Terry",
+        lastName: "Mercyhurst",
+        image: "https://robohash.org/Terry.png?set=set4",
+        address: {
+            city: "Washington",
+        },
+    },
+    {
+        id: 2,
+        firstName: "Max",
+        lastName: "Dillon",
+        image: "https://robohash.org/Terry.png?set=set4",
+        address: {
+            city: "Washington",
+        },
+    },
+    {
+        id: 3,
+        firstName: "Nick",
+        lastName: "White",
+        image: "https://robohash.org/Terry.png?set=set4",
+        address: {
+            city: "Washington",
+        },
+    },
+]
     },
     error: ''
 }
