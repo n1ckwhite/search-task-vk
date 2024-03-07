@@ -2,7 +2,7 @@ import { IData } from "../../types";
 import { searchUsers } from "../../helpers";
 
 interface IUsersService {
-    getUsers: (Body?: string) => Promise<IData>;
+    getUsers: (Body: string) => Promise<IData>;
 }
 
 export const usersService: IUsersService= {
