@@ -8,7 +8,7 @@ export const SearchResults: FC = () => {
   const users = useSelector(usersSelector)
   const status = useSelector(statusSelector)
   return (
-    <div className={s.users_list}>
+    <ul className={s.users_list}>
       { status === 'pending' && <Loader/> }
       { status === 'success' &&
           <>
@@ -19,6 +19,10 @@ export const SearchResults: FC = () => {
         )
       )}
           </> }
-    </div>
+      { status === 'success'
+          && !users.length
+          && <li className={s.user__li}>Пользователи не найдены!</li>
+      }
+    </ul>
   );
 }
