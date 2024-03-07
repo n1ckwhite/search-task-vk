@@ -1,4 +1,4 @@
-import { TUserIdType } from "./userId.type.ts";
+import {TUserIdType} from "./userId.type.ts";
 
 export interface IUserInterface {
     id: TUserIdType,

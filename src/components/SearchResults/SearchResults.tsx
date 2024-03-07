@@ -1,7 +1,7 @@
 import { FC, useContext } from "react";
-import { SearchContext } from "./helpers";
 import s from './SearchResults.module.css'
 import { UserCard } from "../UserCard";
+import { SearchContext } from "./helpers";
 export const SearchResults: FC = () => {
   const {users} = useContext(SearchContext);
   return (
