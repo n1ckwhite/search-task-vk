@@ -8,7 +8,6 @@ interface IUserCard {
         city: string;
     };
 }
-
 export const UserCard: FC<IUserCard> = (props) => {
     const {
         image,

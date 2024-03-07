@@ -12,8 +12,8 @@ export const mockUsers: IUserInterface[] = [
   },
   {
     id: 2,
-    firstName: "Terry",
-    lastName: "Medhurst",
+    firstName: "Max",
+    lastName: "Dilon",
     image: "https://robohash.org/Terry.png?set=set4",
     address: {
       city: "Washington",
@@ -21,8 +21,8 @@ export const mockUsers: IUserInterface[] = [
   },
   {
     id: 3,
-    firstName: "Terry",
-    lastName: "Medhurst",
+    firstName: "Nick",
+    lastName: "White",
     image: "https://robohash.org/Terry.png?set=set4",
     address: {
       city: "Washington",

@@ -1,13 +1,12 @@
 import { FC, useContext } from "react";
-import { UserCard } from "../UserCard/UserCard";
 import { SearchContext } from "./helpers";
 import s from './SearchResults.module.css'
-import { IUserInterface } from "../../types/user.interface.ts";
+import { UserCard } from "../UserCard";
 export const SearchResults: FC = () => {
-  const { users } = useContext(SearchContext);
+  const {users} = useContext(SearchContext);
   return (
     <div className={s.users_list}>
-      {users.map((user:IUserInterface) => (
+      {users.map((user) => (
           <li className={s.user__li} key={user.id}>
             <UserCard {...user} />
           </li>
