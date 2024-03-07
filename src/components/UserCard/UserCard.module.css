@@ -1,10 +1,10 @@
-.userCard {
+.user_card {
     background-color: azure;
     padding: 20px;
     border: 1px solid gainsboro;
     border-radius: 10px;
     margin-bottom: 15px;
-  
+
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -13,14 +13,13 @@
     align-items: center;
 }
 
-.userPic {
+.user_pic {
     border: 3px solid white;
     border-radius: 50%;
     width: 80px;
 }
 
-.userInfo {
+.user_info {
     display: flex;
     flex-direction: column;
 }
-  
