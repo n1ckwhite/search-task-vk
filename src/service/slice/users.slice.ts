@@ -12,36 +12,8 @@ const initialState: IUserInitialState = {
     data: {
         limit: 0,
         skip: 0,
-        total: 3,
-        users: [
-            {
-                id: 1,
-                firstName: "Terry",
-                lastName: "Medhurst",
-                image: "https://robohash.org/Terry.png?set=set4",
-                address: {
-                    city: "Washington",
-                },
-            },
-            {
-                id: 2,
-                firstName: "Max",
-                lastName: "Dilon",
-                image: "https://robohash.org/Terry.png?set=set4",
-                address: {
-                    city: "Washington",
-                },
-            },
-            {
-                id: 3,
-                firstName: "Nick",
-                lastName: "White",
-                image: "https://robohash.org/Terry.png?set=set4",
-                address: {
-                    city: "Washington",
-                },
-            },
-        ]
+        total: 0,
+        users: []
     },
     error: ''
 }
@@ -69,12 +41,10 @@ export const usersSlice = createSlice({
             })
     },
     selectors: {
-        usersSelector: (sliceState) => sliceState.data.users,
-        statusSelector: (sliceState) => sliceState.status
+        dataSelector: (sliceState) => sliceState,
     }
 })
 
 export const {
-    usersSelector,
-    statusSelector
+    dataSelector,
 } = usersSlice.selectors

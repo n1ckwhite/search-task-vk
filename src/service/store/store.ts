@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { usersSlice } from "../slice";
+import { usersSlice} from "../slice";
 import { useDispatch } from "react-redux";
 
 export const store = configureStore({
@@ -7,6 +7,8 @@ export const store = configureStore({
         users: usersSlice.reducer
     }
 })
+
+
 
 export type AppDispatch = typeof store.dispatch;
 export const useAppDispatch = () => useDispatch<AppDispatch>();
