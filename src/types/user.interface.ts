@@ -1,6 +1,6 @@
-import {TUserIdType} from "./userId.type.ts";
+import { TUserIdType } from "./userId.type.ts";
 
-export interface IUserInterface {
+export interface IUser {
     id: TUserIdType,
     firstName: string,
     lastName: string,
@@ -9,33 +9,3 @@ export interface IUserInterface {
     city: string,
 },
 }
-
-export const mockUsers: IUserInterface[] = [
-    {
-        id: 1,
-        firstName: "Terry",
-        lastName: "Medhurst",
-        image: "https://robohash.org/Terry.png?set=set4",
-        address: {
-            city: "Washington",
-        },
-    },
-    {
-        id: 2,
-        firstName: "Terry",
-        lastName: "Medhurst",
-        image: "https://robohash.org/Terry.png?set=set4",
-        address: {
-            city: "Washington",
-        },
-    },
-    {
-        id: 3,
-        firstName: "Terry",
-        lastName: "Medhurst",
-        image: "https://robohash.org/Terry.png?set=set4",
-        address: {
-            city: "Washington",
-        },
-    },
-];
