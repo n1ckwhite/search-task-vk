@@ -1,28 +1,21 @@
-import { FC } from "react";
+import { FC, useEffect } from "react";
 import s from './SearchResults.module.css'
-import { UserCard } from "../UserCard";
-import { statusSelector, usersSelector} from "../../service";
-import { useSelector } from "react-redux";
-import { Loader } from "../Loader";
+import { getUsersThunk, useAppDispatch } from "../../service";
+import { Loader } from "./components/Loader";
+import { SearchErrorResults } from "./components/SearchErrorResults";
+import { SearchNullUsersResults } from "./components/SearchNullUsersResults";
+import { SearchSuccessResults } from "./components/SearchSuccessResults";
 export const SearchResults: FC = () => {
-  const users = useSelector(usersSelector)
-  const status = useSelector(statusSelector)
+  const dispatch = useAppDispatch()
+  useEffect(() => {
+    dispatch(getUsersThunk())
+  }, [dispatch]);
   return (
     <ul className={s.users_list}>
-      { status === 'pending' && <Loader/> }
-      { status === 'success' &&
-          <>
-            {users.map((user) => (
-                <li className={s.user__li} key={user.id}>
-                  <UserCard {...user} />
-                </li>
-        )
-      )}
-          </> }
-      { status === 'success'
-          && !users.length
-          && <li className={s.user__li}>Пользователи не найдены!</li>
-      }
+      <SearchSuccessResults/>
+      <SearchNullUsersResults/>
+      <SearchErrorResults/>
+      <Loader/>
     </ul>
   );
 }
