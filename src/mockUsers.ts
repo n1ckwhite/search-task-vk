@@ -1,4 +1,6 @@
-export const mockUsers = [
+import { IUserInterface } from "./types/user.interface.ts";
+
+export const mockUsers: IUserInterface[] = [
   {
     id: 1,
     firstName: "Terry",

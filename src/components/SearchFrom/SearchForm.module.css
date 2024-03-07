@@ -1,26 +1,25 @@
-.searchForm {
+.search_form {
     display: flex;
     justify-content: center;
     padding: 20px;
   }
 
-.searchForm form {
+.search_form form {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-  
-.searchForm input {
+
+.search_form input {
     padding: 10px;
     border: 1px solid gainsboro;
     border-radius: 10px;
 }
 
-.searchForm input[type="text"] {
+.search_form input[type="text"] {
     width: 300px;
 }
-  
-.searchForm input[type="submit"] {
+
+.search_form input[type="submit"] {
     width: 150px;
 }
-  
