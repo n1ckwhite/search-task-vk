@@ -1,7 +1,7 @@
 .search_form {
     display: flex;
     justify-content: center;
-    padding: 20px;
+    padding: var(--padding);
 }
 
 .search_form form {
@@ -12,12 +12,12 @@
 
 .search_form input {
     padding: 10px;
-    border: 1px solid gainsboro;
-    border-radius: 10px;
+    border: var(--border-gainsboro);
+    border-radius: var(--radius);
 }
 
 .search_form input[type="text"] {
-    width: 300px;
+    width: var(--width-300);
 }
 
 .search_form input[type="submit"] {

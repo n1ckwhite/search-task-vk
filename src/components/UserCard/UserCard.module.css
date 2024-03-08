@@ -1,13 +1,13 @@
 .user_card {
     background-color: azure;
-    padding: 20px;
-    border: 1px solid gainsboro;
-    border-radius: 10px;
+    padding: var(--padding);
+    border: var(--border-gainsboro);
+    border-radius: var(--radius);
     margin-bottom: 15px;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    width: 300px;
+    width: var(--width-300);
     column-gap: 24px;
     align-items: center;
 }
@@ -15,7 +15,7 @@
 .user_pic {
     border: 3px solid white;
     border-radius: 50%;
-    width: 80px;
+    width: var(--px-80);
 }
 
 .user_info {

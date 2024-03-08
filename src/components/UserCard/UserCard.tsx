@@ -8,16 +8,10 @@ interface IUserCard {
         city: string;
     };
 }
-export const UserCard: FC<IUserCard> = (props) => {
-    const {
-        image,
-        firstName,
-        lastName,
-        address
-    } = props
+export const UserCard: FC<IUserCard> = ({image,firstName,lastName,address}) => {
   return (
     <div className={s.user_card}>
-      <img className={s.user_pic} src={image} />
+      <img loading="lazy" className={s.user_pic} src={image} />
       <div className={s.user_info}>
         <div>{`${firstName} ${lastName}`}</div>
         <div>{address.city}</div>
