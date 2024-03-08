@@ -10,9 +10,9 @@ interface IUserInitialState {
 const initialState: IUserInitialState = {
     status: 'success',
     data: {
-        limit: 0,
+        limit: 100,
         skip: 0,
-        total: 0,
+        total: 3,
         users: [
     {
         id: 1,
@@ -58,13 +58,15 @@ export const usersSlice = createSlice({
         builder
             .addCase(getUsersThunk.pending, (state) => {
                 state.status = 'pending'
+                state.error = ''
             })
             .addCase(getUsersThunk.fulfilled, (state,action) => {
                 state.data = action.payload
                 state.status = 'success'
+                state.error = ''
             })
             .addCase(getUsersThunk.rejected, (state) => {
-                state.error = '132'
+                state.error = 'Ошибка при загрузке пользователей'
                 state.status = 'error'
             })
     },

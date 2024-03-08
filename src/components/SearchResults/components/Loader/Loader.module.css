@@ -1,17 +1,17 @@
 .lds_dual_ring {
     display: inline-block;
-    width: 80px;
-    height: 80px;
+    width: var(--px-80);
+    height: var(--px-80);
 }
 .lds_dual_ring:after {
     content: " ";
     display: block;
-    width: 64px;
-    height: 64px;
+    width: var(--px-64);
+    height: var(--px-64);
     margin: 8px;
     border-radius: 50%;
     border: 6px solid;
-    border-color: #ddd transparent #ddd transparent;
+    border-color: var(--load-color) transparent var(--load-color) transparent;
     animation: lds_dual_ring 1.2s linear infinite;
 }
 @keyframes lds_dual_ring {
