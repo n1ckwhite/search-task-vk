@@ -1,1 +1,1 @@
-export type TUserIdType = number
+export type TUserIdType = number;
